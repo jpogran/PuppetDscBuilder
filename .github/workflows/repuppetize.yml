@@ -72,8 +72,7 @@ jobs:
 
       - name: "install pdk"
         run: |
-          choco feature disable -n=showDownloadProgress
-          choco install pdk --version ${{ env.pdk_version }} -y
+          winget install pdk --silent --version=${{ env.pdk_version }}
 
       - name: "configure winrm"
         run: |
